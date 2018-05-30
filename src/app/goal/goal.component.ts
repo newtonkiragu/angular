@@ -16,6 +16,10 @@ export class GoalComponent implements OnInit {
     new Goal(5, 'play monkey games', 'monkey games involves climbing trees'),
 
   ]
+  
+  toogleDetails(index){
+    this.goals[index].showDescription = !this.goals[index].showDescription;
+  }
 
   constructor() { }
 

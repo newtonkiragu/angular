@@ -2,8 +2,8 @@
 <hr>
 <ul>
   <div *ngFor='let goal of goals; let i = index'>
-      <li>{{goal.name}}</li>
-    <button (click)='toogleDetails(i)'> toogle description</button>
+      
+      <li (click)='toogleDetails(i)'>{{goal.name}}. Click to view details</li>
 
     <app-goal-details *ngIf='goal.showDescription' [goal]='goal'></app-goal-details>
   </div>
